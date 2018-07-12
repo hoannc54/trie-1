@@ -43,7 +43,6 @@ Câu truy vấn là log2(MAX)
 Giả sử F(L,R) là mảng con của XOR từ L đến R.
 Ở đây chúng ta sử dụng tính chất F(L,R) = F(1,R) XOR F(1,L-1). Làm thế nào?
 Giả sử mảng con với XOR lớn nhất kết thúc tại vị trí i. Bây giờ, chúng ta cần tối đa F(L,i) ie. F(1,i) XOR F(1,L-1) khi L<=i. Giả sử, chúng ta đã chèn F(1,L-1) trong trie cho mọi L<=i, lúc đó bài toán trở về vấn đề 1.
-Let's say our subarray with maximum XOR ended at position i. Now, we need to maximise F(L,i) ie. F(1,i) XOR F(1,L-1) where L<=i. Suppose, we inserted F(1,L-1) in our trie for all L<=i, then it's just problem1.
     
     
     ans=0
@@ -83,7 +82,7 @@ Nếu q là 1, và p là 0, thì chúng ta thực hiện điều này:
 
 ![][5]
 
-Tương tự chúng ta có thể dễ dàng làm ra với 3 trường hợp ie khác. (q=1,p=1), (q=0,p=1) và (q=0,p=1).
+Tương tự chúng ta có thể dễ dàng làm ra với 3 trường hợp khác. (q=1,p=1), (q=0,p=1) và (q=0,p=1).
 
 Vì vậy, chúng ta cần phải thay đổi cấu trúc của chúng ta ở đây, chúng ta cũng giữ một số lượng các nút lá mà có thể tiếp tận từ nút hiện tại nếu đi từ phía bên trái và tương tự với phái bên phải. Bởi vì, nếu không, sự phức tạp sẽ tăng lên, nếu chúng ta duyệt cây từ lần này đến lần khác. Chúng ta có thể làm điều này trong khi thêm số vào trong cây một cách dễ dàng.
 
